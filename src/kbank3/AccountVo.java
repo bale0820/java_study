@@ -1,25 +1,16 @@
-package kbank13;
+package kbank3;
 
 public class AccountVo {
 	private String name;
-	 private String account;
-	 private String password;
-	 private int balance;
-	 
-	 
-	 
-	 public AccountVo() {}
-	 
-	 public AccountVo(String name,String account,String password, int balance) {
-		 this.name = name;
-			this.account = account;
-			this.password = password;
-			this.balance = balance;
-	 }
+	private String account;
+	private String password;
+	private int balance;
+	
+	
+	//생성자
+	public AccountVo() {
+	}
 
-	 
-	 
-	 
 	public String getName() {
 		return name;
 	}
@@ -51,15 +42,5 @@ public class AccountVo {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
 
 }

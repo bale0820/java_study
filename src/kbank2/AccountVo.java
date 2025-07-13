@@ -1,11 +1,22 @@
 package kbank2;
 
+/**
+ * 은행의 고객 정보를 담는 클래스이며, 은행직원을 통해 생성된다.
+ */
 public class AccountVo {
 	private String name;
 	private String accountNumber;
 	private String password;
 	private int balance;
+	
 	public AccountVo() {}
+	public AccountVo(String name, String accountNumber, String password, int balance) {
+		this.name = name;
+		this.accountNumber = accountNumber;
+		this.password = password;
+		this.balance = balance;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -15,8 +26,8 @@ public class AccountVo {
 	public String getAccountNumber() {
 		return accountNumber;
 	}
-	public void setAccountNumber(String accountNumer) {
-		this.accountNumber = accountNumer;
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
 	}
 	public String getPassword() {
 		return password;
@@ -29,10 +40,6 @@ public class AccountVo {
 	}
 	public void setBalance(int balance) {
 		this.balance = balance;
-	}
-	
-
-	
-	
+	}	
 	
 }
