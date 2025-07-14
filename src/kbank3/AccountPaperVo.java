@@ -11,7 +11,7 @@ public class AccountPaperVo {
 	
 	private AccountPaperVo() {}
 	public AccountPaperVo getInstance() {
-		System.out.println("종이가 생성됨");
+		System.out.println("종이가 생성됨!");
 		return accountPaper;
 	}
 
