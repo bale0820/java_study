@@ -2,7 +2,7 @@ package chapter07;
 //Object는 모든 클래스의 부모다
 
 public class Animal {
-	//Field : 전역변수 / 할당안해도 javac이 알아서 할당해준다
+	//Field : 전역변수 / 할당안해도 jvm이 알아서 할당해준다
 	String name;
 	int age;
 	
