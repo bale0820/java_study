@@ -9,7 +9,7 @@ package chapter07;
 
 public class ScoreMgmSystemTest {
 	public static void main(String[] args) {
-		ScoreMgmSystem tjsms =  new ScoreMgmSystem();
+		ScoreMgmSystem1 tjsms =  new ScoreMgmSystem1();
 			
 		tjsms.showMenu();
 

@@ -6,7 +6,7 @@ import java.util.Scanner;
  * - 학생 3명의 점수를 입력 받는다. 
  * - 한 명 입력 후 계속 입력 여부를 메시지로 출력 후 입력 받는다.
  */
-public class ScoreMgmSystem {
+public class ScoreMgmSystem1 {
 	//Field
 	String admin;
 	Student student;
