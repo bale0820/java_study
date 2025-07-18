@@ -25,8 +25,8 @@ public class ExceptionTest4 {
 	try{
 		checkAge(age);
 	}catch(Exception e) {
-		System.out.print(e.getMessage());
-		System.out.print("에러발생!");
+		System.out.println(e.getMessage());
+		System.out.println("에러발생!");
 	} finally {
 		scan.close();
 		System.out.println("-- 프로그램 종료 --");

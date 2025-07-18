@@ -13,6 +13,7 @@ public class ExceptionTest3 {
 		if(name1.equals(eo.name)) { //null은 가서 빈값으로 가져온다
 			System.out.println("동일!!");
 		} else {
+			System.out.println(eo.name);
 			System.out.println("다름!!");
 		}
 		} catch(NullPointerException ne) {
