@@ -28,6 +28,7 @@ public class ArrayListTest {
 		System.out.println(list.size());
 		System.out.println(list.get(0)); //객체라서 [0]이렇게 접근못함
 		System.out.println(list.get(3));
+		System.out.println(list.get(3));
 		
 	}
 
