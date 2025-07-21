@@ -9,9 +9,9 @@ import java.util.Vector;
 /**
  * List 인터페이스
  */
-public class ListClass {
+public class ListTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//메인쓰레드가 작업 병력처리가능 독립적실행
 		//제너릭을<>을 통해 데이터타입을 정의한 후 사용함!!
 		List<Integer> list1 = new ArrayList<Integer>();
 		List<String> list2 = new LinkedList<String>();
