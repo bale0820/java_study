@@ -12,6 +12,8 @@ public class MainThreadTest {
 		ThreadExtend te = new ThreadExtend(); //te Thread : 독립적 실행 - 각자 실행 후 종료
 		te.start();// 쓰레드는 메인스레드에 간섭을 받지않는다 main쓰레드가 먼저 종료
 		
+	
+		
 		Thread t = new Thread(new RunnableImpl()); //t Thread : 독립적 실행 - 각자 실행 후 종료 
 		//둘중 어느게 실행될지는 jvm이 알아서
 		t.start();
