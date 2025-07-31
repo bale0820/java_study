@@ -12,7 +12,7 @@ public class DBConn {
 	private String user = "root";
 	private String password = "mysql1234";
 
-	Connection connection;
+	protected Connection connection;
 	protected Statement stmt;
 	protected PreparedStatement pstmt;
 	protected ResultSet rs;
@@ -35,6 +35,7 @@ public class DBConn {
 		try {
 			pstmt = connection.prepareStatement(sql); // 택시
 			System.out.println("--->> 2단계 성공!!");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

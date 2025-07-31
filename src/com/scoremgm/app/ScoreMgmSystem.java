@@ -37,9 +37,9 @@ public class ScoreMgmSystem {
 				case REGISTER:	service.register();		break;
 				case LIST:		service.list();			break;
 				case SEARCH: 	service.search();		break;
-				case UPDATE:	service.update();		break;
-				case DELETE:	service.delete();		break;
-				case EXIT:		service.exit();			break;
+//				case UPDATE:	service.update();		break;
+//				case DELETE:	service.delete();		break;
+//				case EXIT:		service.exit();			break;
 				default:	
 					System.out.println("=> 메뉴 준비중 입니다.");
 			}			
@@ -57,7 +57,7 @@ public class ScoreMgmSystem {
 	 */
 	public void showMenu() {
 		System.out.println("===== 학생 성적 관리 시스템 =====");
-		System.out.println("전체 학생수 : " + service.getCount());
+		System.out.println("전체 학생수 : "+service.getCount());
 		System.out.println("--------------------------------------");
 		System.out.println("1. 등록");
 		System.out.println("2. 조회");
