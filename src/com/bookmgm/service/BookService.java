@@ -18,4 +18,7 @@ public interface BookService {
 	void exit();
 
 	int getCount();
+	
+	void selectRepository();
+	void selectRepository(int num);
 }

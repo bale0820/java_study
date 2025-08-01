@@ -12,6 +12,7 @@ public class BookManagementApplication {
 	public static final int UPDATE = 4;
 	public static final int DELETE = 5;
 	public static final int EXIT = 6;
+	public static final int CHANGE = 7;
 	public Scanner scan;
 	public BookService service;
 
@@ -25,7 +26,7 @@ public class BookManagementApplication {
 	 * 메뉴 출력 조금 수정해서 많이 바꾸자
 	 */
 	public void showMenu() {
-		String[] labels = { "도서 등록", "도서 목록 조회", "도서 검색", "도서 수정", "도서 삭제", "종료" };
+		String[] labels = { "도서 등록", "도서 목록 조회", "도서 검색", "도서 수정", "도서 삭제", "종료","데이터베이스 변경" };
 		int count = 0;
 		System.out.println("===== 📕📖📚 도서 관리 시스템 📕📖📚 =====");
 		System.out.println("전체 도서수 : " + service.getCount());
@@ -61,6 +62,9 @@ public class BookManagementApplication {
 		case EXIT:
 			service.exit();
 			break;
+		case CHANGE:
+			service.selectRepository(CHANGE);
+			break;
 		default:
 			System.out.println("=> 메뉴 준비중 입니다.");
 			selectMenu();
@@ -72,7 +76,8 @@ public class BookManagementApplication {
 	}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+		Thread.sleep(10000);
 		new BookManagementApplication();
 	}
 

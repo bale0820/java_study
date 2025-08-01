@@ -80,39 +80,51 @@ public class ScoreRepositoryImpl extends DBConn
 //		
 //	}
 //	
-//	@Override
-//	public void remove(String no) {
-////		int searchIdx = -1;
-////		for(int i=0;i<storage.size();i++) {
-////			if(storage.get(i).getNo().equals(no)) {
-////				searchIdx = i;
-////			}
-////		}
-//		no = "2025-"+no;
-//		Iterator<MemberVo> ie = storage.iterator();
-//		while(ie.hasNext()) {
-//			MemberVo m = ie.next();
-//			if(m.getNo().equals(no)) {
-//				ie.remove();
-//				break;
-//			}
-//		}
-//		
-//	}
-//	
-//	public void update(MemberVo member) {
-//		int idx = -1;
-//		for(int i=0;i<storage.size();i++) {
-//			MemberVo m = storage.get(i);
-//			if(m.getNo().equals(member.getNo())) {
-//				idx = i;
-//				break;
-//			}
-//		}
-//		storage.set(idx, member);
-//	}
-//	
-//
+	@Override 
+	public int remove(String mid) {
+		int rows = 0;
+		String sql = """
+				delete from score_member where mid = ?
+				""";
+		try{
+			getPreparedStatement(sql);
+			pstmt.setString(1, mid);
+			rows = pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return rows;
+		
+	}
+	
+	@Override
+	public int update(MemberVo member) {
+		int rows = 0;
+		String sql = """
+				update score_member
+					set kor = ?, eng = ?, math = ?
+					where mid = ?
+				""";
+		
+		try {
+			getPreparedStatement(sql);
+			pstmt.setInt(1, member.getKor());
+			pstmt.setInt(2,member.getEng() );
+			pstmt.setInt(3,member.getMath() );
+			pstmt.setString(4, member.getMid());
+			rows = pstmt.executeUpdate();
+			
+			
+			
+		}catch(Exception e ) {
+			e.printStackTrace();
+		}
+		return rows;
+	}
+	
+
 	@Override
 	public List<MemberVo> findAll() {
 		List<MemberVo> list = new ArrayList<MemberVo>();
