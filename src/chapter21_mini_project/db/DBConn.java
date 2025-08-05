@@ -16,7 +16,6 @@ public class DBConn {
 	public DBConn() {
 		try {
 			connect = DriverManager.getConnection(url, user, password);
-			System.out.println("연결 완료");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}		
@@ -29,7 +28,6 @@ public class DBConn {
 				pstmt.close();
 			}
 			pstmt = connect.prepareStatement(sql);
-			System.out.println("택시 생성완료");	
 		}catch(Exception e) {
 			e.printStackTrace();
 		}	

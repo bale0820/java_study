@@ -27,7 +27,7 @@ public class Pay extends DBConn {
 	public void pay(String gid) {
 		this.gid = gid;
 		repository = new RepositoryImpl();
-		list = repository.menuCaruItemList(gid);
+		list = repository.menuCartItemList(gid);
 		System.out.print(list.size());
 		for(int i = 0 ;i<list.size();i++) {
 			Book book = list.get(i);
@@ -69,7 +69,7 @@ public class Pay extends DBConn {
 			System.out.println("고객명 : " + name+"        "+"연락처 : " +phone);
 			System.out.println("배송지 : " + delivery+"        "+"발송일 : " + LocalDate.now());
 			System.out.println("-----------------------------------------------" );
-			System.out.println("도서ID\t\t수량\t\t합계");
+			System.out.println("도서ID\t수량\t합계");
 			list.forEach((book)-> {
 				System.out.print(book.getBid()+"\t");
 				System.out.print(book.getCount()+"\t");
@@ -78,13 +78,13 @@ public class Pay extends DBConn {
 			System.out.println("-----------------------------------------------" );
 		}else {
 			
-			List<Book> list = repository.menuCaruItemList(gid);
+			List<Book> list = repository.menuCartItemList(gid);
 			GuestVo gv = repository.findGuest(gid);
 			System.out.println("-----------------배송받을 고객 정보----------------");
 			System.out.println("고객명 : " + gv.getName()+"        "+"연락처 : " +gv.getPhone());
 			System.out.println("배송지 : " + gv.getDelivery()+"        "+"발송일 : " + LocalDate.now());
 			System.out.println("-----------------------------------------------" );
-			System.out.println("도서ID\t\t수량\t\t합계");
+			System.out.println("도서ID\t수량\t합계");
 			list.forEach((book)-> {
 				System.out.print(book.getBid()+"\t");
 				System.out.print(book.getCount()+"\t");

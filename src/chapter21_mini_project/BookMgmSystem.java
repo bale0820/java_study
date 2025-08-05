@@ -39,13 +39,13 @@ public class BookMgmSystem {
 		System.out.println("7. 영수증 표시하기 \t 8. 종료");
 		System.out.println("********************************");
 		list = service.getBooks();
-		System.out.println("Bid\tauthor\ttitle\tprice\tisbn\tbate");
+		System.out.println("Bid\tauthor\ttitle\tprice\tisbn\t\tbate");
 		list.forEach((book) -> {
 			System.out.print(book.getBid()+'\t');
 			System.out.print(book.getAuthor()+'\t');
 			System.out.print(book.getTitle()+'\t');
-			System.out.print(book.getPrice());
-			System.out.print("\t"+book.getIsbn()+'\t');
+			System.out.print(book.getPrice()+"\t");
+			System.out.print(book.getIsbn()+'\t');
 			System.out.print(book.getBdate()+'\n');
 		});
 		selectMenu();	
@@ -59,7 +59,7 @@ public class BookMgmSystem {
 			service.menuGuestInfo();;
 			break;
 		case LIST :
-			service.menuCaruItemList();
+			service.menuCartItemList();
 			break;
 		case EMPTY :
 			service.menuCartClear();

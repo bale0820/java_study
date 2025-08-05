@@ -23,7 +23,7 @@ public class WhileTest {
 		
 		while(i<=end) {
 			sum += i;
-			i++; //i+=10;
+			i++;//i+=10;
 		}
 		System.out.println("sum = " + sum);
 
